@@ -1,28 +1,36 @@
 //variables
-let nombreAmigo=[];
-let validarnombre = document.getElementById("amigo");
+let listaAmigo=[];
 
 
 //funciones
-function agregarAmigo() {    
+function agregarAmigo() {
 
     validarNombre();
-
-    
 
 }
 
 function validarNombre() {
-    
-    if (validarnombre.value == '') {
+
+    if (obtenerNombre() == '') {
         alert("Registre un nombre");
     }
     else{
-
+        asignarNombre();
         alert("nombre agregado");
     }
-   
 
+function asignarNombre(){
         
-    
+    let agregarnNombre = document.querySelector('#listaAmigos');
+    agregarnNombre.innerHTML = obtenerNombre();
+    console.log(obtenerNombre());
+ }
+ 
+ function obtenerNombre(){
+
+    let nombreAmigo = document.getElementById('amigo').value;
+    return nombreAmigo;
+
+ }
+
 }
