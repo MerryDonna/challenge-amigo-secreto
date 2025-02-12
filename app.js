@@ -17,7 +17,16 @@ function validarNombre() {
     else{
         asignarNombre();
         alert("nombre agregado");
+        limpiarCelda();
+
     }
+
+    function obtenerNombre(){
+
+        let nombreAmigo = document.getElementById('amigo').value;
+        return nombreAmigo;
+    
+     }
 
 function asignarNombre(){
         
@@ -26,11 +35,13 @@ function asignarNombre(){
     console.log(obtenerNombre());
  }
  
- function obtenerNombre(){
 
-    let nombreAmigo = document.getElementById('amigo').value;
-    return nombreAmigo;
+ function limpiarCelda(){
 
+    let limpiarCelda = document.getElementById('amigo').value ="";
+    //limpiarCelda.innerHTML = "";
+    console.log(`Este es valor de la celda limpiada:${limpiarCelda}`);
+    
  }
 
 }
