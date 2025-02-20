@@ -6,6 +6,7 @@ let listaAmigo=[];
 function agregarAmigo() {
 
     validarNombre();
+    
 
 }
 
@@ -18,9 +19,8 @@ function validarNombre() {
         asignarNombre();
         alert("nombre agregado");
         limpiarCelda();
-
     }
-
+}
     function obtenerNombre(){
 
         let nombreAmigo = document.getElementById('amigo').value;
@@ -33,32 +33,17 @@ function asignarNombre(){
 
     let agregarnNombre = document.querySelector('#listaAmigos');    
     listaAmigo.push(obtenerNombre());
-    //console.log(nombreAmigo);
-
+    
     let lista ="";
    
     for (let nombres = 0; nombres < listaAmigo.length; nombres++) {
 
-        lista += `<li>${listaAmigo[nombres]}</li>`;
-        
-        //agregarnNombre.innerHTML += `<li>${listaAmigo[nombres]}</li>`;
-
-        console.log(`Array:${listaAmigo[nombres]}`)
-        //console.log(nombres);
+        lista += `<li>${listaAmigo[nombres]}</li>`;           
 
     }
-    console.log(lista);
+    
     agregarnNombre.innerHTML =lista;
-        
     
-    
-
-    
-   // agregarnNombre.innerHTML = obtenerNombre();
-    //console.log(obtenerNombre());
-
-    //agregarnNombre.innerHTML = arrayNombre();
-    //console.log(arrayNombre());
  }
 
 
@@ -70,19 +55,21 @@ function asignarNombre(){
  }
 
 
- function arrayNombre(){
+ function sortearAmigo(){
 
-    // let nombres = [];
-    // nombres.push(obtenerNombre);
-    // console.log(nombres);
+    let sorteo = Math.floor(Math.random()*listaAmigo.length);
+    
+    let amigoSorteado = document.getElementById("resultado");
+    amigoSorteado.innerHTML = `El ganador es: ${listaAmigo[sorteo]}`;
 
 
-    // for (let array of listaAmigo) {
-    //     console.log(array)
-    // }
+ }
 
-    //return listaAmigo
+ function activarButton(){
+
+    let button = document.getElementsByClassName("button-add");
+    button.disabled = true;
  }
 
 
-}
+
