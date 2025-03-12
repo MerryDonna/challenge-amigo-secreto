@@ -27,6 +27,8 @@ function validarNombre() {
         
         return nombreAmigo;
 
+
+
      }
 
 function asignarNombre(){
@@ -50,7 +52,17 @@ function asignarNombre(){
  function limpiarCelda(){
 
     let limpiarCelda = document.getElementById('amigo').value ="";
-    
+        
+
+ }
+
+ function limpiarListado(){
+
+    let limpiarlistado = document.getElementById('listaAmigos');
+    limpiarlistado.innerHTML="";
+    listaAmigo=[];
+
+    console.log(limpiarlistado);
 
  }
 
@@ -62,6 +74,7 @@ function asignarNombre(){
     let amigoSorteado = document.getElementById("resultado");
     amigoSorteado.innerHTML = `El ganador es: ${listaAmigo[sorteo]}`;
 
+    limpiarListado();
 
  }
 
