@@ -3,7 +3,7 @@
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button-hover: #e8a45148;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -162,4 +162,5 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    color: #000;
 }
