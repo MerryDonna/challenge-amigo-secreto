@@ -62,8 +62,18 @@ function asignarNombre(){
     limpiarlistado.innerHTML="";
     listaAmigo=[];
 
-    console.log(limpiarlistado);
+ 
 
+ }
+
+ function reiniciar() {
+    let limpiarlistado = document.getElementById('listaAmigos');
+    limpiarlistado.innerHTML="";
+    listaAmigo=[];
+
+    
+    let limpiarganador = document.getElementById('resultado');
+    limpiarganador.innerHTML="";
  }
 
 
